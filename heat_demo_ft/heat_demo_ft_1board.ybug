@@ -1,0 +1,13 @@
+# make APP=heat_demo
+# tubotron &
+# visualiser &
+
+# set iptag on all eth-connected chips
+sp root
+iptag 1 set . 17894
+
+# run the application
+sp root
+app_load heat_demo_ft.aplx all 1-16 16
+sleep 1
+app_sig all 16 sync0
