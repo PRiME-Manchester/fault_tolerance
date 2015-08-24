@@ -1403,7 +1403,7 @@ void c_main()
     spin1_set_timer_tick (TIMER_TICK_PERIOD);
 
     // register callbacks
-    spin1_callback_on (MCPL_PACKET_RECEIVED, receive_data, 0);
+    spin1_callback_on (MCPL_PACKET_RECEIVED, receive_data, -1);
     spin1_callback_on (TIMER_TICK, update, 0);
     spin1_callback_on (SDP_PACKET_RX, host_data, 0);
 
